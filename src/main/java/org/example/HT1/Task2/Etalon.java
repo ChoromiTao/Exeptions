@@ -17,7 +17,7 @@ public class Etalon {
     }
 
     public class Printer{
-        public static void main(String[] args) {
+        public void main(String[] args) {
             int[] a = {};
             int[] b = {};
 

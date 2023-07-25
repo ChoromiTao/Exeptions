@@ -1,0 +1,25 @@
+Задание 2: просто объявить или задать массив перед try. Если длина массива меньше, чем планируется вызваться элемент с индексом 8, то можно бросить ещё одно исключение на ArrayIndexOutOfBoundsException.
+int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+try {
+   int d = 0;
+   double catchedRes1 = intArray[8] / d;
+   System.out.println("catchedRes1 = " + catchedRes1);
+} catch (ArithmeticException e) {
+   System.out.println("Catching exception: " + e);
+}
+Задание 3: в строке void main не нужен throws Exception. Исключение на  NullPointerException ex тоже не нужен. Throwable тоже не нужен. У printSum не нужен throws FileNotFoundException.
+public static void main(String[] args){
+   try {
+       int a = 90;
+       int b = 3;
+       System.out.println(a / b);
+       printSum(23, 234);
+       int[] abc = { 1, 2 };
+       abc[3] = 9;
+   } catch (IndexOutOfBoundsException ex) {
+       System.out.println("Массив выходит за пределы своего размера!");
+   }
+}
+public static void printSum(Integer a, Integer b) {
+   System.out.println(a + b);
+}
